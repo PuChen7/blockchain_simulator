@@ -20,6 +20,7 @@ class Block{
         return new this('time', '---', 'f1r57-h45h', []);
     }
 
+    // return a new block with info in it
     static mineBlock(lastBlock, data){
         const timestamp = Date.now();
         const lastHash = lastBlock.hash;
@@ -29,6 +30,11 @@ class Block{
 
     static hash(timestamp, lastHash, data){
         return SHA256(`${timestamp}${lastHash}${data}`).toString();
+    }
+
+    static blockHash(block){
+        const {timestamp, lastHash, data} = block;
+        return Block.hash(timestamp, lastHash, data);
     }
 }
 
