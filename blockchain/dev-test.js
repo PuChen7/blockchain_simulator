@@ -1,6 +1,6 @@
 // require the module
 const Block = require('./block');
 
-const block = new Block('foo', 'bar', 'zoo', 'aaa');
+const fooBlock = Block.mineBlock(Block.genesis(), 'foo');
 
-console.log(block.toString());
+console.log(fooBlock.toString());
