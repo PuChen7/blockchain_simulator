@@ -32,3 +32,15 @@ Mining time is controlled by `DIFFICULTY` and `MINE_RATE` in a `do-while` loop.
 When multiple miners adding new chains, the system needs to determine which chain is valid and should be accepted. 
 
 The chain which is the `longest` will be accepted. 
+
+### Wallet
+Wallets store the balance of an individual.
+
+Wallets store na individual's `keys`.
+
+* Private Key - used to generate signatures
+* Public Key - used to verify signatures and public address
+
+Key is an unique String of numbers. 
+
+### Transactions
