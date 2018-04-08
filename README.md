@@ -44,3 +44,7 @@ Wallets store na individual's `keys`.
 Key is an unique String of numbers. 
 
 ### Transactions
+Transaction contains three parts:
+* Input: a reference to an output from a previous transaction. (Have reference to total balance)
+* Amount: transfer amount
+* Output: a list of recipients(recipient's public key)
