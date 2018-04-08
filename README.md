@@ -48,3 +48,6 @@ Transaction contains three parts:
 * Input: a reference to an output from a previous transaction. (Have reference to total balance)
 * Amount: transfer amount
 * Output: a list of recipients(recipient's public key)
+
+#### Transaction Pool
+Individuals submit transactions(unconfirmed since they have not been mined to blockchain yet). Miners creates blocks and confirm transactions. 
