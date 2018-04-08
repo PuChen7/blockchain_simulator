@@ -16,6 +16,9 @@
     "jest": "^22.4.3",
     "nodemon": "^1.17.3"
   },
+  "jest": {
+    "testEnvironment": "node"
+  },    
   "dependencies": {
     "body-parser": "^1.18.2",
     "crypto-js": "^3.1.9-1",
