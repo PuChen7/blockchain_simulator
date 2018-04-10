@@ -7,9 +7,7 @@
  */
 
 import java.security.MessageDigest;
-2
-import java.util.Scanner;
-3
+import java.util.ArrayList;
 import javax.xml.bind.DatatypeConverter;
 
 
@@ -18,12 +16,12 @@ public class Block {
     private String timestamp;
     private String lastHash;
     private String hash;
-    private String[] data;
+    private ArrayList data = new ArrayList();
     private int nonce;
     private int difficulty;
 
     // constructor
-    public Block(String timestamp, String lastHash, String hash, String[] data, int nonce, int difficulty){
+    public Block(String timestamp, String lastHash, String hash, ArrayList data, int nonce, int difficulty){
         this.timestamp = timestamp;
         this.lastHash = lastHash;
         this.hash = hash;
@@ -55,5 +53,15 @@ public class Block {
             ex.printStackTrace();
         }
         return result;
+    }
+
+    /**
+     * output formatted String
+     */
+    public String toString(){
+        String str = "Block -\nTimestamp: " + this.timestamp + "\nLast Hash: "
+                + this.lastHash + "\nHash: " + this.hash + "\nNonce: " + this.nonce
+                + "\nDifficulty: " + this.difficulty + "\nData: " + this.data;
+        return str;
     }
 }
