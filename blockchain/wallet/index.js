@@ -32,7 +32,7 @@ class Wallet{
             transaction.update(this, recipient, amount);
         }else {
             transaction = Transaction.newTransaction(this, recipient, amount);
-            transactionPool.updateOrAddTransaction(transaction);
+            transactionPool.updateOrAddTransactions(transaction);
         }
 
         return transaction;
