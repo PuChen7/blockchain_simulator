@@ -40,21 +40,20 @@ public class Block {
     /**
      * Returns the first block in the chain
      */
-    private Block genesis(){
+    public Block genesis(){
         return new Block(null, "lastHash", "hash", null, 0, this.difficulty);
     }
 
     /**
      * Generates the hash using SHA-256.
-     * @param b - object of Block
      * @return result - the result of hash
      */
-    private String hash(Block b){
-        String data = b.timestamp + b.lastHash + b.data + b.nonce + b.difficulty;
+    public String hash(Timestamp timestamp, String lastHash, ArrayList data, int nonce, int difficulty){
+        String str = timestamp + lastHash + data + nonce + difficulty;
         String result = null;
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
-            byte[] hash = digest.digest(data.getBytes("UTF-8"));
+            byte[] hash = digest.digest(str.getBytes("UTF-8"));
             return DatatypeConverter.printHexBinary(hash);
         }catch(Exception ex) {
             ex.printStackTrace();
@@ -62,17 +61,7 @@ public class Block {
         return result;
     }
 
-    /**
-     * output formatted String
-     */
-    public String toString(){
-        String str = "Block -\nTimestamp: " + this.timestamp + "\nLast Hash: "
-                + this.lastHash + "\nHash: " + this.hash + "\nNonce: " + this.nonce
-                + "\nDifficulty: " + this.difficulty + "\nData: " + this.data;
-        return str;
-    }
-
-    private int adjustDifficulty(Block lastBlock, Timestamp timestamp){
+    public int adjustDifficulty(Block lastBlock, Timestamp timestamp){
         ChainUtil util = new ChainUtil();
         int difficulty = lastBlock.difficulty;
         // add MINE_RATE to the timestamp
@@ -87,5 +76,19 @@ public class Block {
             difficulty -= 1;
 
         return difficulty;
+    }
+
+    public String blockHash(Block b){
+        return this.hash(b.timestamp, b.lastHash, b.data, b.nonce, b.difficulty);
+    }
+
+    /**
+     * output formatted String
+     */
+    public String toString(){
+        String str = "Block -\nTimestamp: " + this.timestamp + "\nLast Hash: "
+                + this.lastHash + "\nHash: " + this.hash + "\nNonce: " + this.nonce
+                + "\nDifficulty: " + this.difficulty + "\nData: " + this.data;
+        return str;
     }
 }
