@@ -36,18 +36,24 @@ The chain which is the `longest` will be accepted.
 ### Wallet
 Wallets store the balance of an individual.
 
-Wallets store na individual's `keys`.
+Wallets store an individual's `keys`.
 
-* Private Key - used to generate signatures
-* Public Key - used to verify signatures and public address
+* `Private Key` - used to generate signatures
+* `Public Key` - used to verify signatures and public address
 
 Key is an unique String of numbers. 
 
 ### Transactions
-Transaction contains three parts:
-* Input: a reference to an output from a previous transaction. (Have reference to total balance)
+Transaction contains `three` parts:
+* Input: a reference to an output from a `previous` transaction. (Have reference to total balance)
 * Amount: transfer amount
 * Output: a list of recipients(recipient's public key)
 
 #### Transaction Pool
-Individuals submit transactions(unconfirmed since they have not been mined to blockchain yet). Miners creates blocks and confirm transactions. 
+Individuals submit `transactions`(unconfirmed since they have not been mined to blockchain yet).
+
+`Miners` take `transactions` from the pool and store them into `blocks`.
+
+Miners are `rewarded` for mining.
+
+Transactions go from `unconfirmed` in the pool to `confirmed` in the chain.

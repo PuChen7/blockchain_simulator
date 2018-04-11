@@ -22,6 +22,14 @@ class TransactionPool {
         // t represents each transaction in transactions array.
         return this.transactions.find(t => t.input.address === address);
     }
+
+    validTransactions() {
+        return this.transactions.filter(transaction => {
+            const outputTotal = this.transactions.outputs.reduce((total, output) => {
+                return total + output.amount;   // get the total amount
+            });
+        });
+    }
 }
 
 module.exports = TransactionPool;
