@@ -12,11 +12,5 @@ public class BlockTest {
         Block genesis = new Block(null, null, null, new ArrayList(), 0, 5);
     }
 
-    @Test
-    public void hash() {
-    }
 
-    @Test
-    public void blockHash() {
-    }
 }

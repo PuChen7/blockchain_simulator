@@ -15,12 +15,12 @@ import javax.xml.bind.DatatypeConverter;
 
 public class Block {
     // private fields
-    private Timestamp timestamp;
-    private String lastHash;
-    private String hash;
-    private ArrayList data = new ArrayList();
-    private int nonce;
-    private int difficulty;
+    public Timestamp timestamp;
+    public String lastHash;
+    public String hash;
+    public ArrayList data = new ArrayList();
+    public int nonce;
+    public int difficulty;
 
     /** @constructor
      *  timestamp: the unix time
