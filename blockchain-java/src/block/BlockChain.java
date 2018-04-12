@@ -32,6 +32,8 @@ public class BlockChain {
         return newBlock;
     }
 
+
+
     /**
      * This method display the entire chain.
      * */

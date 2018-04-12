@@ -15,12 +15,12 @@ import javax.xml.bind.DatatypeConverter;
 
 public class Block {
     // private fields
-    public Timestamp timestamp;
-    public String lastHash;
-    public String hash;
-    public ArrayList data = new ArrayList();
-    public int nonce;
-    public int difficulty;
+    private Timestamp timestamp;
+    private String lastHash;
+    private String hash;
+    private ArrayList data = new ArrayList();
+    private int nonce;
+    private int difficulty;
 
     /** @constructor
      *  timestamp: the unix time
@@ -120,6 +120,21 @@ public class Block {
     public String blockHash(Block b){
         return this.hash(b.timestamp, b.lastHash, b.data, b.nonce, b.difficulty);
     }
+
+    /**
+     * Getter methods
+     */
+    public Timestamp getTimestamp(){ return this.timestamp; }
+
+    public String getLastHash(){ return this.lastHash; }
+
+    public String getHash(){ return this.hash; }
+
+    public ArrayList getData() { return data; }
+
+    public int getNonce() { return nonce; }
+
+    public int getDifficulty() { return difficulty; }
 
     /**
      * output formatted block info

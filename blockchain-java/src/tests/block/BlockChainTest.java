@@ -15,6 +15,9 @@ public class BlockChainTest {
         data.add("transaction2");
         a.addBlock(data);
 
-        assertEquals(a.chain.get(0).hash.compareTo(a.chain.get(1).lastHash) == 0, true);
+        String hash = a.chain.get(0).getHash();
+        String lastHash = a.chain.get(1).getLastHash();
+
+        assertEquals(hash.compareTo(lastHash) == 0, true);
     }
 }
