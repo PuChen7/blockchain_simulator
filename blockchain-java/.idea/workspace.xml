@@ -15,8 +15,8 @@
       <file leaf-file-name="Block.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/block/Block.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="133" column="0" lean-forward="true" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+            <state relative-caret-position="186">
+              <caret line="104" column="52" lean-forward="true" selection-start-line="98" selection-start-column="8" selection-end-line="104" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1206#1207#0" expanded="true" />
@@ -28,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BlockChain.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BlockChain.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/block/BlockChain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="166">
+              <caret line="45" column="42" lean-forward="false" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -40,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BlockChainTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BlockChainTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tests/block/BlockChainTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state relative-caret-position="180">
+              <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,9 +89,9 @@
         <option value="$PROJECT_DIR$/src/block/BlockTest.groovy" />
         <option value="$PROJECT_DIR$/src/tests/block/TestMain.java" />
         <option value="$PROJECT_DIR$/src/tests/block/BlockTest.java" />
-        <option value="$PROJECT_DIR$/src/block/BlockChain.java" />
         <option value="$PROJECT_DIR$/src/block/Block.java" />
         <option value="$PROJECT_DIR$/src/tests/block/BlockChainTest.java" />
+        <option value="$PROJECT_DIR$/src/block/BlockChain.java" />
       </list>
     </option>
   </component>
@@ -172,7 +172,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BlockChainTest.addBlock">
+  <component name="RunManager" selected="JUnit.BlockChainTest">
     <configuration name="BlockTest.genesis" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -237,6 +237,31 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+    </configuration>
+    <configuration name="BlockChainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="block.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="blockchain-java" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="block" />
+      <option name="MAIN_CLASS_NAME" value="block.BlockChainTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration name="BlockChainTest.addBlock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -348,18 +373,20 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Android JUnit.BlockTest.genesis" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.BlockTest" />
       <item index="2" class="java.lang.String" itemvalue="Application.TestMain" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.BlockChainTest.addBlock" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.BlockChainTest" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.BlockChainTest.addBlock" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TestMain" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.BlockTest" />
-        <item index="3" class="java.lang.String" itemvalue="Android JUnit.BlockTest.genesis" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.BlockChainTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BlockChainTest.addBlock" />
+        <item index="2" class="java.lang.String" itemvalue="Application.TestMain" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.BlockTest" />
+        <item index="4" class="java.lang.String" itemvalue="Android JUnit.BlockTest.genesis" />
       </list>
     </recent_temporary>
   </component>
@@ -380,6 +407,15 @@
     <servers />
   </component>
   <component name="TestHistory">
+    <history-entry file="BlockChainTest - 2018.04.11 at 22h 19m 45s.xml">
+      <configuration name="BlockChainTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BlockChainTest - 2018.04.11 at 22h 21m 01s.xml">
+      <configuration name="BlockChainTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BlockChainTest - 2018.04.11 at 22h 21m 42s.xml">
+      <configuration name="BlockChainTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="BlockChainTest_addBlock - 2018.04.11 at 21h 41m 50s.xml">
       <configuration name="BlockChainTest.addBlock" configurationId="JUnit" />
     </history-entry>
@@ -388,15 +424,6 @@
     </history-entry>
     <history-entry file="BlockChainTest_addBlock - 2018.04.11 at 22h 01m 41s.xml">
       <configuration name="BlockChainTest.addBlock" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BlockTest - 2018.04.11 at 20h 10m 04s.xml">
-      <configuration name="BlockTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BlockTest - 2018.04.11 at 20h 10m 16s.xml">
-      <configuration name="BlockTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BlockTest - 2018.04.11 at 20h 14m 00s.xml">
-      <configuration name="BlockTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="BlockTest - 2018.04.11 at 20h 16m 11s.xml">
       <configuration name="BlockTest" configurationId="JUnit" />
@@ -424,7 +451,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4565757" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4565757" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -511,20 +538,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/block/BlockChain.java">
+    <entry file="file://$PROJECT_DIR$/src/tests/block/BlockChainTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/block/Block.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="133" column="0" lean-forward="true" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+        <state relative-caret-position="186">
+          <caret line="104" column="52" lean-forward="true" selection-start-line="98" selection-start-column="8" selection-end-line="104" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1206#1207#0" expanded="true" />
@@ -535,12 +562,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/block/BlockChainTest.java">
+    <entry file="file://$PROJECT_DIR$/src/block/BlockChain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        <state relative-caret-position="166">
+          <caret line="45" column="42" lean-forward="false" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>

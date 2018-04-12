@@ -12,7 +12,7 @@ import java.util.*;
 
 public class BlockChain {
     /* The chain contains all blocks */
-    ArrayList<Block> chain = new ArrayList();
+    private ArrayList<Block> chain = new ArrayList();
 
     public BlockChain(){
         Block b = new Block();
@@ -28,19 +28,35 @@ public class BlockChain {
         Block lastBlock = this.chain.get(this.chain.size()-1);
         Block newBlock = new Block();
         newBlock = newBlock.mineBlock(lastBlock, data);
-        chain.add(newBlock);
+        this.chain.add(newBlock);
         return newBlock;
     }
 
+    /**
+     * This method tests if the chain is valid by traversing though the chain
+     * and check if the current block's hash == previous block's hash.
+     * @param chain
+     * @return boolean
+     */
+    public boolean isValidChain(ArrayList<Block> chain){
+        for (Block block : chain){
+            if (chain.indexOf(block) == 0) continue;
 
+            Block prevBlock = chain.get(chain.indexOf(block) - 1);
+            if (prevBlock.getHash().compareTo(block.getLastHash()) != 0 || block.getHash().compareTo(block.blockHash(block)) != 0) return false;
+        }
+        return true;
+    }
 
     /**
      * This method display the entire chain.
      * */
     public void displayChain(){
-        for (Block ele : chain){
+        for (Block ele : this.chain){
             System.out.println(ele + "\n");
         }
     }
+
+    public ArrayList<Block> getChain(){ return chain; }
 
 }
