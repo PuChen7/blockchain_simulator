@@ -1,10 +1,13 @@
-# Blockchain
-## Versions
+# Blockchain - JavaScript
+## Other Versions
 [Java Version](https://github.com/PuChen7/blockchain_simulator/tree/master/blockchain-java)
 
-[Javascript Version](https://github.com/PuChen7/blockchain_simulator/tree/master/blockchain-javascript)
-
 [Python Version](https://github.com/PuChen7/blockchain_simulator/tree/master/blockchain_python)
+
+## What's new about this version?
+The JavaScript version has Peer-to-peer network which allows different users to commit to the main blockchain.
+
+The p2p network is built based on Node.js.
 
 ## Introduction
 ### Block has following properties

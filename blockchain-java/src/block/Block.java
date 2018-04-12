@@ -45,7 +45,7 @@ public class Block {
      * Returns the first block in the chain
      */
     public Block genesis(){
-        return new Block(null, "lastHash", "hash", null, 0, this.difficulty);
+        return new Block(null, "lastHash", "hash", null, 0, 4);
     }
 
     /**
