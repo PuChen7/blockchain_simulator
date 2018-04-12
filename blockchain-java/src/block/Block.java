@@ -65,6 +65,12 @@ public class Block {
         return result;
     }
 
+    /**
+     * This method creates a new block.
+     * @param lastBlock: the last block
+     * @param data: data should contain transactions
+     * @return new Block
+     */
     public Block mineBlock(Block lastBlock, ArrayList data){
         String lastHash = lastBlock.hash;
         int difficulty = lastBlock.difficulty;
@@ -83,6 +89,12 @@ public class Block {
         return new Block(timestamp, lastHash, hash, data, nonce, difficulty);
     }
 
+    /**
+     * This method adjust difficulty according to the timestamp
+     * @param lastBlock
+     * @param timestamp
+     * @return difficulty
+     */
     public int adjustDifficulty(Block lastBlock, Timestamp timestamp){
         ChainUtil util = new ChainUtil();
         int difficulty = lastBlock.difficulty;
@@ -100,12 +112,17 @@ public class Block {
         return difficulty;
     }
 
+    /**
+     * This method generates the hash of the block.
+     * @param b
+     * @return hash
+     */
     public String blockHash(Block b){
         return this.hash(b.timestamp, b.lastHash, b.data, b.nonce, b.difficulty);
     }
 
     /**
-     * output formatted String
+     * output formatted block info
      */
     public String toString(){
         String str = "Block -\nTimestamp: " + this.timestamp + "\nLast Hash: "

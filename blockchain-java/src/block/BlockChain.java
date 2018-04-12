@@ -11,19 +11,34 @@ package block;
 import java.util.*;
 
 public class BlockChain {
-    ArrayList chain = new ArrayList();
+    /* The chain contains all blocks */
+    ArrayList<Block> chain = new ArrayList();
 
     public BlockChain(){
         Block b = new Block();
         chain.add(b.genesis());
     }
 
+    /**
+     * This method adds a block into the blockchain.
+     * @param data - the data ArrayList should contain transactions
+     * @return newBlock - the newly added block
+     * */
     public Block addBlock(ArrayList data){
-        Block lastBlock = (Block)this.chain.get(this.chain.size()-1);
+        Block lastBlock = this.chain.get(this.chain.size()-1);
         Block newBlock = new Block();
         newBlock = newBlock.mineBlock(lastBlock, data);
         chain.add(newBlock);
         return newBlock;
+    }
+
+    /**
+     * This method display the entire chain.
+     * */
+    public void displayChain(){
+        for (Block ele : chain){
+            System.out.println(ele + "\n");
+        }
     }
 
 }
