@@ -57,6 +57,7 @@ public class BlockChain {
         }
     }
 
+    /** Getter method for getting the chain */
     public ArrayList<Block> getChain(){ return chain; }
 
 }
