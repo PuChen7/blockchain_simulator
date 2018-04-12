@@ -1,3 +1,4 @@
+package block;
 /**
  * This program simulates the blockchain structure.
  *
@@ -6,6 +7,7 @@
  * @since   2018-4-10
  */
 
+import chainutil.*;
 import java.security.MessageDigest;
 import java.sql.*;
 import java.util.*;
@@ -37,6 +39,8 @@ public class Block {
         this.difficulty = difficulty;
     }
 
+    public Block(){}
+
     /**
      * Returns the first block in the chain
      */
@@ -59,6 +63,24 @@ public class Block {
             ex.printStackTrace();
         }
         return result;
+    }
+
+    public Block mineBlock(Block lastBlock, ArrayList data){
+        String lastHash = lastBlock.hash;
+        int difficulty = lastBlock.difficulty;
+        int nonce = 0;
+        String hash;
+        Timestamp timestamp;
+        String zeros = "0";
+
+        do {
+            nonce++;
+            timestamp = new Timestamp(System.currentTimeMillis());
+            difficulty = this.adjustDifficulty(lastBlock, timestamp);
+            hash = this.hash(timestamp, lastHash, data, nonce, difficulty);
+        } while (hash.substring(0,difficulty).compareTo(new String(new char[difficulty]).replace("\0", zeros)) != 0);
+
+        return new Block(timestamp, lastHash, hash, data, nonce, difficulty);
     }
 
     public int adjustDifficulty(Block lastBlock, Timestamp timestamp){
