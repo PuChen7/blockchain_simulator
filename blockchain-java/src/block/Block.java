@@ -54,7 +54,6 @@ public class Block {
      */
     public String hash(Timestamp timestamp, String lastHash, ArrayList data, int nonce, int difficulty){
         String str = timestamp + lastHash + data + nonce + difficulty;
-        String result = null;
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
             byte[] hash = digest.digest(str.getBytes("UTF-8"));
@@ -62,7 +61,7 @@ public class Block {
         }catch(Exception ex) {
             ex.printStackTrace();
         }
-        return result;
+        return null;
     }
 
     /**
