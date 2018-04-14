@@ -1,7 +1,6 @@
 package wallet;
 
 import chainutil.ChainUtil;
-
 import java.security.*;
 
 public class Wallet {
@@ -27,8 +26,15 @@ public class Wallet {
     }
 
 
-
+    /** Getter method for public key */
     public Key getPublicKey(){
         return this.keyPair.getPublic();
+    }
+
+    public String toString(){
+        return  "Wallet -\n" +
+                "public key: " + this.keyPair.getPublic() + "\n" +
+                "balance: " + this.balance;
+
     }
 }
