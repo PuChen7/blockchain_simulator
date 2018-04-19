@@ -1,6 +1,6 @@
 const Block = require('./block');
 
-class Blockchian{
+class Blockchain{
     constructor(){
         this.chain = [Block.genesis()];
     }
@@ -36,4 +36,4 @@ class Blockchian{
     }
 }
 
-module.exports = Blockchian;
+module.exports = Blockchain;

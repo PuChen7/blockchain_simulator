@@ -9,7 +9,7 @@ class TransactionPool {
      * The function adds transaction one at a time. If the transaction exists in the pool, it replace it with the new one.
      * @param {object} transaction - transaction object
      */
-    updateOrAddTransactions(transaction){
+    updateOrAddTransaction(transaction){
         // check if transaction exists in the pool, replace if does
         let transactionWithId = this.transactions.find(t => t.id === transaction.id);
 

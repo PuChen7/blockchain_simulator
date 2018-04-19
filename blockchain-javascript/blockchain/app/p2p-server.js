@@ -50,7 +50,7 @@ class P2pServer{
                     this.blockchain.replaceChain(data.chain);
                     break;
                 case MESSAGE_TYPES.transaction:
-                    this.transactionPool.updateOrAddTransactions(data.transaction);
+                    this.transactionPool.updateOrAddTransaction(data.transaction);
                     break;
                 case MESSAGE_TYPES.clear_transactions:
                     this.transactionPool.clear();
@@ -81,7 +81,7 @@ class P2pServer{
         this.sockets.forEach(socket => this.sendTransaction(socket, transaction));
     }
 
-    broadcaseClearTransactions() {
+    broadcastClearTransactions() {
         this.sockets.forEach(socket=> socket.send(JSON.stringify({
             type: MESSAGE_TYPES.clear_transactions
         })));
